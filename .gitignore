@@ -1,6 +1,3 @@
 #过滤install/ log/ build/目录
 build/
 #过滤图片
-image/
-#上传指定图片
-!image/第六章/拷贝.png
