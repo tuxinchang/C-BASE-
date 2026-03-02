@@ -1,11 +1,10 @@
 #include <iostream>
-
+//必须传入右值引用才能调用这个函数
+void test(int&& x) {
+    std::cout << "使用移动拷贝" << std::endl;
+}
 int main() {
     int a;
-    std::cin >> a;
-    std::cout << "输入的值是: " << a << std::endl;
-    std::string name;
-    std::cin >> name;
-    std::cout << "输入的名字是: " << name << std::endl;
+    test(std::move(a)); // 使用 std::move 将 a 转换为右值引用
     return 0;
 }

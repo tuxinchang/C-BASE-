@@ -1,45 +1,31 @@
 {
     "version": "0.2.0",
     "configurations": [
-        
         {
             "name": "Debug (gdb) -> build/",
             "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}/build/${fileBasenameNoExtension}",
             "args": [],
-            "cwd": "${fileDirname}",
-            "externalConsole": false,
-            "console": "internalConsole",
-            "MIMode": "gdb",
-            "miDebuggerPath": "/usr/bin/gdb",
-            "preLaunchTask": "Build (g++) -> build/"
-        },
-        {
-            "name": "C/C++: g++ 构建和调试活动文件",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${fileDirname}/${fileBasenameNoExtension}",
-            "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
             "setupCommands": [
                 {
-                    "description": "为 gdb 启用整齐打印",
+                    "description": "Enable pretty printing",
                     "text": "-enable-pretty-printing",
                     "ignoreFailures": true
                 },
                 {
-                    "description": "将反汇编风格设置为 Intel",
+                    "description": "Set Intel disassembly",
                     "text": "-gdb-set disassembly-flavor intel",
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "C/C++: g++ 生成活动文件",
-            "miDebuggerPath": "/usr/bin/gdb"
+            "preLaunchTask": "Build (g++) -> build/"
         }
     ]
 }
