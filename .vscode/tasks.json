@@ -1,0 +1,22 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build (g++) -> build/",
+      "type": "shell",
+      "command": "/usr/bin/bash",
+      "args": [
+        "-lc",
+        "mkdir -p build && /usr/bin/g++ -fdiagnostics-color=always -g \"${file}\" -o \"build/${fileBasenameNoExtension}\""
+      ],
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "problemMatcher": ["$gcc"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+姓名：涂新昌  学号：2025024747
+
+五个虚拟机的IP地址：
+192.168.152.128 Master01
+192.168.152.129 Master02
+192.168.152.130 Slave01
+192.168.152.131 Slave02
+192.168.152.132 Slave03
+
+
+
+show_channel_urls: true
+channels:
+  - http://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/
+  - http://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+  - http://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+ssl_verify: false
+
+
+#设置conda的git环境变量
+$env:PATH = "D:\Program Files (x86)\Git\cmd;" + $env:PATH
+
+
+{
+  "builder": {
+    "gc": {
+      "defaultKeepStorage": "20GB",
+      "enabled": true
+    }
+  },
+  "experimental": false,
+  "registry-mirrors": [
+    "https://do.nark.eu.org",
+    "https://dc.j8.work",
+    "https://docker.m.daocloud.io",
+    "https://dockerproxy.com",
+    "https://dockermirrors.ustc.edu.cn",
+    "https://docke.nju.edu.cn"
+  ]
+}
+
+docker start my-redis
+
+
+启动mojucoko
+# 终端1 - 启动仿真
+./scripts/build_nodes.sh sim
+source install/setup.bash
+ros2 launch mujoco_simulator mujoco_simulator.launch.py
+
+
+
+wandb URL：wandb.ai/3031484694-south-china-normal-university
+wandb keyAPI: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
+
+#初次上传git仓库
+tuxinchang@tuxinchang-virtual-machine:~/chapt$ git init
+已初始化空的 Git 仓库于 /home/tuxinchang/chapt/.git/
+tuxinchang@tuxinchang-virtual-machine:~/chapt$ git remote add origin https://github.com/tuxinchang/roscode_example.git
+tuxinchang@tuxinchang-virtual-machine:~/chapt$ git branch -M main
+tuxinchang@tuxinchang-virtual-machine:~/chapt$ touch .gitignore
+tuxinchang@tuxinchang-virtual-machine:~/chapt$ git add .gitignore 
+tuxinchang@tuxinchang-virtual-machine:~/chapt$ git add .    
+tuxinchang@tuxinchang-virtual-machine:~/chapt$ git commit -m "Initial commit: add project files and .gitignore"
+tuxinchang@tuxinchang-virtual-machine:~/chapt$ git push -u origin main
+
+# 日常更新代码只需三步：
+git add .                # 暂存所有修改
+git commit -m "更新说明"   # 提交到本地
+git push                 # 推送到远程（首次后无需 -u）
+
+
+
+use admin
+db.createUser({
+  user: "txc_mongodb",
+  pwd: "303148tu", // 请务必设置一个强密码
+  roles: [ { role: "userAdminAnyDatabase", db: "admin" }, "readWriteAnyDatabase" ]
+}
