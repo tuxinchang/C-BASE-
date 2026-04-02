@@ -1,16 +1,25 @@
 {
-  "version": 4,
-  "configurations": [
-    {
-      "name": "Linux",
-      "compilerPath": "/usr/bin/g++",
-      "intelliSenseMode": "linux-gcc-x64",
-      "cppStandard": "c++17",
-      "cStandard": "c17",
-      "includePath": [
-        "${workspaceFolder}/**"
-      ],
-      "defines": []
-    }
-  ]
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/usr/include/x86_64-linux-gnu/qt5",
+                "/usr/include/x86_64-linux-gnu/qt5/QtWidgets",
+                "/usr/include/x86_64-linux-gnu/qt5/QtGui",
+                "/usr/include/x86_64-linux-gnu/qt5/QtCore",
+                "${workspaceFolder}/build/cpp_qt/test01/test01_qt_login_autogen/include"
+            ],
+            "defines": [
+                "QT_WIDGETS_LIB",
+                "QT_GUI_LIB",
+                "QT_CORE_LIB"
+            ],
+            "compilerPath": "/usr/bin/g++",
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
 }

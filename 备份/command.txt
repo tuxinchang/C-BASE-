@@ -1,0 +1,5 @@
+cd /home/tuxinchang/Cpp_project
+rm -rf build
+mkdir build
+cd build
+cmake ..

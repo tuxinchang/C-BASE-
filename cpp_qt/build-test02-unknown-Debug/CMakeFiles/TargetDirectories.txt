@@ -1,0 +1,5 @@
+/home/tuxinchang/Cpp_project/cpp_qt/build-test02-unknown-Debug/CMakeFiles/test02_qt.dir
+/home/tuxinchang/Cpp_project/cpp_qt/build-test02-unknown-Debug/CMakeFiles/edit_cache.dir
+/home/tuxinchang/Cpp_project/cpp_qt/build-test02-unknown-Debug/CMakeFiles/rebuild_cache.dir
+/home/tuxinchang/Cpp_project/cpp_qt/build-test02-unknown-Debug/CMakeFiles/test02_qt_autogen_timestamp_deps.dir
+/home/tuxinchang/Cpp_project/cpp_qt/build-test02-unknown-Debug/CMakeFiles/test02_qt_autogen.dir
